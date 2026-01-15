@@ -1,4 +1,3 @@
-import headshot from "@assets/Untitled_design_(1)_1768406976593.png";
 import { motion } from "framer-motion";
 import { Award, Map, Scale, Users } from "lucide-react";
 
@@ -65,7 +64,7 @@ export function About() {
                <div className="absolute inset-0 bg-blue-600 rounded-2xl transform rotate-3 opacity-10"></div>
                <div className="relative bg-slate-50 p-2 rounded-2xl shadow-xl overflow-hidden w-full h-full">
                  <img 
-                   src={headshot}
+                   src="/headshot.png"
                    alt="Steven Sparks - Real Estate Appraiser"
                    className="w-full h-full object-cover rounded-xl"
                  />
