@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@assets/generated_images/rural_land_with_pasture,_hardwood_trees,_fencing_and_distant_home.png";
 
 export function Hero() {
   return (
@@ -9,8 +8,8 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroImage}
-          alt="Modern suburban home"
+          src="/hero-bg.png"
+          alt="Rural Mississippi landscape"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-transparent" />
