@@ -48,7 +48,7 @@ export function Navbar() {
               src="/logo.png" 
               alt="Waypoint Appraisal Co." 
               className={cn(
-                "h-[56px] w-auto -ml-2 transition-all flex-shrink-0",
+                "h-[96px] w-auto -ml-6 transition-all flex-shrink-0",
                 isScrolled ? "" : "brightness-0 invert drop-shadow-lg"
               )}
             />
