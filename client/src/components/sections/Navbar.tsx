@@ -43,12 +43,13 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/">
-          <a className="flex items-center gap-2 flex-nowrap">
+          <a className="flex items-center gap-3 flex-nowrap" style={{ marginLeft: '-12px' }}>
             <img 
               src="/logo.png?v=3" 
               alt="Waypoint Appraisal Co." 
+              style={{ height: '56px', width: 'auto', maxHeight: 'none' }}
               className={cn(
-                "h-[120px] w-auto -ml-6 transition-all flex-shrink-0",
+                "flex-shrink-0 transition-all",
                 isScrolled ? "" : "brightness-0 invert drop-shadow-lg"
               )}
             />
