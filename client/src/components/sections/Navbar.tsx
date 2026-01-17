@@ -43,13 +43,15 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/">
-          <a className={cn(
-            "text-2xl md:text-3xl font-serif font-bold tracking-tight transition-all",
-            isScrolled 
-              ? "text-slate-900" 
-              : "text-white [text-shadow:_0_2px_8px_rgb(0_0_0_/_40%)]"
-          )}>
-            Waypoint<span className={isScrolled ? "text-blue-600" : "text-blue-300"}>Appraisal</span>
+          <a className="flex items-center gap-3">
+            <img 
+              src="/logo.png" 
+              alt="Waypoint Appraisal Co." 
+              className={cn(
+                "h-12 md:h-14 w-auto transition-all",
+                isScrolled ? "" : "brightness-0 invert drop-shadow-lg"
+              )}
+            />
           </a>
         </Link>
 
