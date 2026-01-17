@@ -41,19 +41,19 @@ export function Navbar() {
           : "bg-transparent border-transparent py-5"
       )}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+      <div className="container mx-auto px-2 md:px-4 flex items-center justify-between">
         <Link href="/">
-          <a className="flex items-center gap-4">
+          <a className="flex items-baseline gap-4">
             <img 
               src="/logo.png" 
               alt="Waypoint Appraisal Co." 
               className={cn(
-                "h-16 md:h-20 w-auto transition-all",
+                "h-20 md:h-24 lg:h-28 w-auto transition-all",
                 isScrolled ? "" : "brightness-0 invert drop-shadow-lg"
               )}
             />
             <span className={cn(
-              "text-2xl md:text-3xl font-serif font-bold tracking-tight transition-all hidden sm:block",
+              "text-3xl md:text-4xl font-serif font-bold tracking-tight transition-all hidden sm:block",
               isScrolled 
                 ? "text-slate-900" 
                 : "text-white [text-shadow:_0_2px_8px_rgb(0_0_0_/_40%)]"
