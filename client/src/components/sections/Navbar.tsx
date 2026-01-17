@@ -43,8 +43,13 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/">
-          <a className="text-2xl font-serif font-bold text-primary tracking-tight">
-            Waypoint<span className="text-blue-600">Appraisal</span>
+          <a className={cn(
+            "text-2xl md:text-3xl font-serif font-bold tracking-tight transition-all",
+            isScrolled 
+              ? "text-slate-900" 
+              : "text-white [text-shadow:_0_2px_8px_rgb(0_0_0_/_40%)]"
+          )}>
+            Waypoint<span className={isScrolled ? "text-blue-600" : "text-blue-300"}>Appraisal</span>
           </a>
         </Link>
 
@@ -55,15 +60,17 @@ export function Navbar() {
               key={link.name}
               onClick={() => scrollToSection(link.href)}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-blue-600",
-                isScrolled ? "text-gray-700" : "text-gray-800"
+                "text-base font-semibold transition-colors hover:text-blue-400",
+                isScrolled 
+                  ? "text-gray-700 hover:text-blue-600" 
+                  : "text-white [text-shadow:_0_1px_4px_rgb(0_0_0_/_50%)]"
               )}
             >
               {link.name}
             </button>
           ))}
           <Button 
-            className="bg-primary hover:bg-primary/90 text-white shadow-lg"
+            className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg text-base font-semibold px-6 py-2"
             onClick={() => scrollToSection("#contact")}
           >
             Request Appraisal
@@ -72,10 +79,13 @@ export function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-gray-700"
+          className={cn(
+            "md:hidden",
+            isScrolled ? "text-gray-700" : "text-white"
+          )}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
