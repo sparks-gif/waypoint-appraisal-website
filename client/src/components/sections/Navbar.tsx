@@ -40,14 +40,15 @@ export function Navbar() {
           ? "bg-white/95 backdrop-blur-md border-gray-200 py-3 shadow-sm"
           : "bg-transparent border-transparent py-5"
       )}
+      style={{ height: 'auto', maxHeight: 'none', overflow: 'visible' }}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/">
-          <a className="flex items-center gap-3 flex-nowrap" style={{ marginLeft: '-12px' }}>
+          <a className="flex items-center gap-3 flex-nowrap" style={{ marginLeft: '-12px', lineHeight: 'normal', alignItems: 'center' }}>
             <img 
               src="/logo.png?v=3" 
               alt="Waypoint Appraisal Co." 
-              style={{ height: '56px', width: 'auto', maxHeight: 'none' }}
+              style={{ height: '56px', width: 'auto', maxHeight: 'none', minHeight: '56px', display: 'block' }}
               className={cn(
                 "flex-shrink-0 transition-all",
                 isScrolled ? "" : "brightness-0 invert drop-shadow-lg"
