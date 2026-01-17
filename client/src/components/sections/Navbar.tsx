@@ -45,10 +45,10 @@ export function Navbar() {
         <Link href="/">
           <a className="flex items-center gap-2 flex-nowrap">
             <img 
-              src="/logo.png" 
+              src="/logo.png?v=3" 
               alt="Waypoint Appraisal Co." 
               className={cn(
-                "h-[96px] w-auto -ml-6 transition-all flex-shrink-0",
+                "h-[120px] w-auto -ml-6 transition-all flex-shrink-0",
                 isScrolled ? "" : "brightness-0 invert drop-shadow-lg"
               )}
             />
